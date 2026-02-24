@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1000 дней вместе 🤍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Превью ===== -->
+  <div class="intro" id="intro">
+    <div class="intro-content">
+      <h1>1000 дней вместе 🤍</h1>
+      <p class="intro-text">
+        Это маленькое путешествие по нашим воспоминаниям.
+        Готова прожить их ещё раз?
+      </p>
+      <button id="startBtn">Начать</button>
+    </div>
+  </div>
+
+  <!-- ===== Музыка ===== -->
+  <audio id="bgMusic" loop>
+    <source src="music/love.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ===== Фон ===== -->
+  <div class="background-hearts"></div>
+
+  <!-- ===== Карточка ===== -->
+  <div class="card hidden" id="card">
+    <div class="top">
+      <span id="counter"></span>
+    </div>
+
+    <img id="photo" alt="Наш день">
+    <p id="caption"></p>
+
+    <div class="hint">Листай ➜</div>
+  </div>
+
+  <!-- ===== Финальный экран ===== -->
+  <div class="final hidden" id="finalScreen">
+    <div class="final-content">
+      <h2>1000 дней 🤍 </h2>
+      <p id="finalText">
+        Спасибо тебе за каждый день.<br><br>
+        За смех. За тепло. За любовь.<br><br>
+        Я люблю тебя больше всех на свете.
+      </p>
+      <button id="restartBtn">Пройти ещё раз</button>
+      <button id="bonusBtn">Бонус за то что дошла до конца 🎁</button>
+    </div>
+  </div>
+
+  <!-- ===== Модальное окно бонуса ===== -->
+  <div class="bonus hidden" id="bonusModal">
+    <div class="bonus-content">
+      <div class="machine">
+        <canvas id="pixelHeart" width="300" height="300"></canvas>
+      </div>
+      <button id="closeBonus">Закрыть</button>
+    </div>
+  </div>
+
+  
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>

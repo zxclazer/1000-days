@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== ФОН ===== */
+.background-hearts {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.background-hearts::before {
+  content: "🤍  💖  🤍  💕  🤍  💗  🤍  ";
+  font-size: 40px;
+  opacity: 0.12;
+  animation: float 18s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-100vh); }
+}
+
+/* ===== КАРТОЧКА ===== */
+.card {
+  width: 92%;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 26px;
+  padding: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.top { font-size: 14px; color: #999; margin-bottom: 12px; }
+.card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  user-select: none;
+  display: block;
+}
+#caption { font-size: 16px; margin-bottom: 14px; }
+.hint { font-size: 13px; color: #bbb; }
+
+/* ===== ПРЕВЬЮ ===== */
+.intro {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 20;
+  padding: 30px;
+}
+
+.intro-content { max-width: 320px; }
+.intro h1 { font-size: 28px; margin-bottom: 18px; }
+.intro-text { opacity: 0.85; margin-bottom: 30px; line-height: 1.5; }
+.intro button {
+  background: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 22px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.hidden { display: none !important; }
+
+/* ===== ФИНАЛ ===== */
+.final {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 100;
+  padding: 30px;
+}
+
+.final-content { max-width: 320px; }
+.final h2 { font-size: 30px; margin-bottom: 20px; }
+.final p { font-size: 18px; line-height: 1.6; margin-bottom: 30px; }
+.final button {
+  background: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* ===== БОНУС ===== */
+.bonus {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200; 
+}
+
+.bonus-content {
+  background: #111;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.machine {
+  background: #000;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 40px rgba(255,0,100,0.3);
+}
+
+.bonus button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  background: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
